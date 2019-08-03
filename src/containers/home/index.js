@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import _actions from './actions'
+import './index.scss'
 
 class Home extends React.Component {
   constructor() {
@@ -27,13 +28,14 @@ class Home extends React.Component {
     } = this.props
 
     return (
-      <div>
+      <div className="home-container">
         <div>Home Page</div>
         <br/>
         <br/>
         
         <div>{reduxState}</div>
         <input type="button" onClick={this.updateState} value="onClick to update state"></input>
+        <div className="scss-test" >1111</div>
       </div>
     )
   }
